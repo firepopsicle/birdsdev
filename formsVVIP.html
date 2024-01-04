@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Demo</title>
+</head>
+
+<body>
+    <h1>Forms Demo</h1>
+    <!-- file:///C:/tacos?Username=helu&password=hihi&Color=%23e01f1f&Num=08&time=10%3A34 -->
+
+    <form action="/tacos">
+        <section>
+            <label for="Username">Enter a Username</label>
+            <input id="Username" type="text" placeholder="Username" name="Username">
+        </section>
+        <br>
+        <section>
+            <label for="Password"> Password</label>
+            <input id="Password" type="password" placeholder="password" name="password">
+        </section>
+        <br>
+        <section>
+            <label for="Color"> Select Color </label>
+            <input id="Color" type="color" name="Color">
+        </section>
+        <br>
+        <section>
+            <label for="Number">Number</label>
+            <input id="Number" type="Number" placeholder="Enter a number" name="Num" min="0" max="10000000000">
+        </section>
+        <br>
+        <section>
+            <label for="time">Enter Current Time</label>
+            <input id="time" type="time" placeholder="00:00" name="time">
+        </section>
+        <br>
+        <!-- Default behaviour of a button is to submit -->
+        <button type="submit">submit</button>
+        <!-- Second way of submitting -->
+        <br>
+        <input type="submit" value="Click Me!">
+
+
+
+    </form>
+    <hr>
+    <button>Not Inside Form</button>
+    <!-- Part 2 of Form -->
+    <br>
+    <hr>
+    <br>
+    <h2>Hijacking formsZ</h2>
+    <h1>Search On Reddit</h1>
+    <form action="https://www.reddit.com/search">
+        <label for="searchreddit"></label>
+        <input type="text" id="searchreddit" name="q">
+        <button>submit</button>
+
+    </form>
+    <br>
+
+    <form action="https://www.google.com/search">
+        <label for="search">
+            <h1>Search on Google</h1>
+        </label>
+        <input type="text" name="q" id="search">
+        <button>Submit</button>
+    </form>
+    <br>
+    <form action="https://www.youtube.com/results">
+        <label for="searchyt">
+            <h1>Search Youtube</h1>
+        </label>
+        <input type="text" id="searchyt" name="search_query">
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>More inputs (checkbox)</h2>
+
+    <section>
+        <span>
+            <form action="/birds">
+
+                <b>What will you eat?</b>
+                <ul>
+                    <li><input type="checkbox" name="checkbox1" id="chkb" checked value="before dinner">
+                        <label for="chkb">Starters</label>
+                    </li>
+
+                    <li><input type="checkbox" name="agreeto1" id="1" checked value="dinner">
+                        <label for="1">Main Course</label>
+                    </li>
+
+                    <li><input type="checkbox" name="agreeto2" id="2" checked value="drinks">
+                        <label for="2">Beverages </label>
+                    </li>
+
+                    <li><input type="checkbox" name="agreeto3" id="3" checked value="after dinner sweets">
+                        <label for="3">Dessert</label>
+                    </li>
+                </ul>
+                <!-- <button>Submit</button> -->
+
+        </span>
+
+        <span>
+
+            <b>Add 2+7</b>
+            <ul>
+                <li><input type="radio" name="r1" id="R1">
+                    <label for="R1">4</label>
+                </li>
+                <li><input type="radio" name="r1" id="R2">
+                    <label for="R2">10</label>
+                </li>
+                <li><input type="radio" name="r1" id="R3">
+                    <label for="R3">9</label>
+                <li><input type="radio" name="r1" id="R4">
+                    <label for="R4">7</label>
+                </li>
+                </li>
+            </ul>
+            <!-- <button>Submit</button> -->
+
+        </span>
+        <br>
+        <span>
+
+            <label for="age_group">Select your age group</label>
+            <select name="age" id="age_group">
+                <option value="select" select>--Please select an option--</option>
+                <option value="0-3"> 0 to 3 years old</option>
+                <option value="3-8"> 3 to 8 years old</option>
+                <option value="8-13"> 8 to 13 years old</option>
+                <option value="13-16"> 13 to 16 years old</option>
+                <option value="16-18"> 16 to 18 years old</option>
+                <option value="18+"> 18 and above</option>
+            </select>
+            <br>
+
+
+        </span>
+        <br>
+        <span>
+            <label for="pr1">Select the numbers of Pizza's you would like to order</label>
+            <br>
+            <input type="range" name="pizzanumbers" id="pr1" min="1" max="5" value="2">
+            <br>
+        </span>
+
+        <span>
+            <label for="requests">Any special requests?</label> <br>
+            <textarea name="Any special requests?" id="requests" cols="60" rows="10"
+                placeholder="Enter text here!"></textarea>
+        </span>
+        <br>
+        <button type="submit">Submit form</button>
+
+
+        </form>
+    </section>
+
+    <span>
+        <h2>Validations Demo</h2>
+        <form action="/formssubmit.html">
+            <label for="first">Enter First Name</label>
+            <input type="text" name="first" id="first" required>
+            <br>
+            <br>
+            <label for="username">Create Username</label>
+            <input type="text" name="username" id="username" minlength="3" maxlength="21" required>
+            <br>
+            <br>
+            <label for="email">Enter your email id</label>
+            <input type="email" name="email" id="email" placeholder="someone@example.com" required>
+            <br>
+            <br>
+            <label for="password">Creat Password</label>
+            <input type="password" name="password" id="password" minlength="5" required>
+            <br>
+            <br>
+            <button> Submit</button>
+        </form>
+    </span>
+
+</html>
